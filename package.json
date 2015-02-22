@@ -4,8 +4,8 @@
   "description": "Demo application of how to authenticate with the Respoke API.",
   "main": "server.js",
   "scripts": {
-    "start": "gulp",
-    "postinstall": "node node_modules/.bin/gulp default"
+   "build": "gulp",
+    "start": "node app.js"
   },
   "author": "The Respoke Team",
   "license": "MIT",
