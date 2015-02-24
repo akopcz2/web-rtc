@@ -10,7 +10,7 @@ var _ 			= require('underscore');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 8080; // Change to Heroku Server
 
 var options = {
   key: fs.readFileSync('./key.pem'),
