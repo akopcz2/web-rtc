@@ -111,7 +111,7 @@ var AppView = Backbone.View.extend({
 		
 		var name = $(".signin-name").val();
 		var email = $(".signin-email").val();
-		var image = gravatar(email, {size: 110});
+		var image = gravatar(email, {size: 80});
 		
 		
 		this.member.set("name", name);

@@ -10,7 +10,7 @@ var _ 			= require('underscore');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 8080; // Change to Heroku Server
 
 var options = {
   key: fs.readFileSync('./key.pem'),
@@ -34,7 +34,7 @@ app.use(express.static(__dirname + '/app'));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
 // Start the server
-var server = http.createServer(app).listen(8080);
+var server = http.createServer(app).listen(8080); // Change server to heroku
 //var server = https.createServer(options, app).listen(443);
 
 /*app.listen(port, function(err){
@@ -77,6 +77,7 @@ io.on('connection', function(socket){
 		  socket.emit('initiator', room);
 
 		  socket.emit('group', JSON.stringify(group));
+		  // Change number to allow more users to enter the chat room
 	  } else if(numClients == 1){
 		  socket.join(room);
 		  // When the client is second to join the room, both clients are ready.
