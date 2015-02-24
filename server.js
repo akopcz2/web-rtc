@@ -77,6 +77,7 @@ io.on('connection', function(socket){
 		  socket.emit('initiator', room);
 
 		  socket.emit('group', JSON.stringify(group));
+		  // Change number to allow more users to enter the chat room
 	  } else if(numClients == 1){
 		  socket.join(room);
 		  // When the client is second to join the room, both clients are ready.
