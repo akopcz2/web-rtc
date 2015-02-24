@@ -61,6 +61,7 @@ io.on('connection', function(socket){
 	  //Add member to the group
 	  var index = _.indexOf(_.pluck(group, 'socketId'), socket.id);
 	  
+	  //Negative once all users leave chat room
 	  if(index === -1) {
 		  console.log("join member does not exist");
 		  group.push(event.member);
