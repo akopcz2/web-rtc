@@ -34,7 +34,7 @@ app.use(express.static(__dirname + '/app'));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
 // Start the server
-var server = http.createServer(app).listen(8080);
+var server = http.createServer(app).listen(8080); // Change server to heroku
 //var server = https.createServer(options, app).listen(443);
 
 /*app.listen(port, function(err){
